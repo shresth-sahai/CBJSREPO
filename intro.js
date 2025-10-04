@@ -10,9 +10,9 @@
 // functions are first class citizens 
 
 // type of variables 
-var a;  // function scoped can be redeclared 
-let b; // block scoped cannot be redeclared 
-const c=1; // block scoped cannot be reassigned 
+// var a;  // function scoped can be redeclared 
+// let b; // block scoped cannot be redeclared 
+// const c=1; // block scoped cannot be reassigned 
 
 // function a(){
 
@@ -67,7 +67,132 @@ const c=1; // block scoped cannot be reassigned
 
 // f();
 
+// primitive type -> Number , String ('' , "",), Boolean , Undefined (declared but not assigned)
+//null (intentional absence of value), SYmbol , BigInt
+
+// typeof
+
+// Q1 
+// function test() {
+//   if (true) {
+//     var a = 1;
+//     let b = 2;
+//   }
+//   console.log(a);// 1
+//   console.log(b); //refernce err 
+// }
+// test();
+
+// // q2 
+
+// var a = 1;
+// // hoisting
+// function test() {
+// console.log(a);// undefined 
+// var a = 2;
+// console.log(a) // 2
+// }
+// test();
+// console.log(a); //1 
+// // Q3 
+// let a = 'outer';
+// {
+//   console.log(a); // ref err 
+//   let a = 'inner';
+// }
+// // Q3 
+// var a = 'outer';
+// {
+//   console.log(a); // outer  
+//   var a = 'inner';
+// }
+// // q4 
+// var x = 1;
+// console.log(x);
+// let x = 2;
+// console.log(x);
+// zomato -> district -> 
+
+// function declared inside block are hosited to the top of the block 
+// function outer() {
+//   console.log(typeof f); 
+//   if (true) {
+//     var f = 10;
+//     function f() {}
+//   }
+//   console.log(typeof f);
+// }
+// outer();
+
+//Function
+
+//1 hoisting
+// 2 this keyword
+// function abc(){
+
+// }
+// shorthand of funtion 
+// const abc => {
+
+// }
+
+
+// // function exp  -> non hoisted . must be defined before calling 
+// const a = function(){
+//     console.log("HEELPP")
+// }
+// console.log(a);
+
+// const functionName= function(params){
+//     return Value;
+// }
+
+// // arrow 
+// // no this keyowrd
+
+// const functionName1= (params)=>{
+//     return a;
+// }
+
+// const f1 =(param) => Val;
+
+// function greet(name)
+// {
+//     return `Hello, ${name}`;
+// }
+
+// const a=greet("Welcomee");
+// console.log(a);
+
+// IIFE
+
+// (function (){
+
+// }) ();
+
+// function sayHello(){
+// console.log("HELLO");
+// }
+// sayHello();
+
+
+// (function (){
+// console.log("Hello")
+// }) ();
+
+// errr 
+var x = 'global';
+(function() {
+  console.log(x);
+  if (false) {
+    var x = 'hoisted but not assigned';
+  }
+  let x = 'block';
+})();
 
 
 
-
+function a() { return 'first'; }
+var a;
+function a() { return 'second'; }
+console.log(a());
