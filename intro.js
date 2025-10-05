@@ -114,6 +114,7 @@
 // zomato -> district -> 
 
 // function declared inside block are hosited to the top of the block 
+
 // function outer() {
 //   console.log(typeof f); 
 //   if (true) {
@@ -181,18 +182,49 @@
 // }) ();
 
 // errr 
-var x = 'global';
-(function() {
-  console.log(x);
-  if (false) {
-    var x = 'hoisted but not assigned';
-  }
-  let x = 'block';
-})();
+// var x = 'global';
+// (function() {
+//   console.log(x);
+//   if (false) {
+//     var x = 'hoisted but not assigned';
+//   }
+//   let x = 'block';
+// })();
 
 
 
-function a() { return 'first'; }
-var a;
-function a() { return 'second'; }
-console.log(a());
+// function a() { return 'first'; }
+// var a;
+// function a() { return 'second'; }
+// console.log(a());
+
+// let text='John';
+// let t1="John";
+
+// let t3="'john'";
+
+// // template strings -> ES6 
+// let t5=`I m js dev`;
+
+// const l=t5.length;
+
+
+// let text3="the character \\ is called backslash";
+
+// let te=`the abc 
+// csd
+// jjjlf`;
+// console.log(te)
+
+
+// interpolation -> `${name}`
+
+let price=10;
+let GST=0.25;
+
+let total= `Total : ${(price*(1+GST)).toFixed(2)}`;
+
+console.log(total);
+
+
+
