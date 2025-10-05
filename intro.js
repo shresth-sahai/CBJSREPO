@@ -219,12 +219,163 @@
 
 // interpolation -> `${name}`
 
-let price=10;
-let GST=0.25;
+// let price=10;
+// let GST=0.25;
 
-let total= `Total : ${(price*(1+GST)).toFixed(2)}`;
+// let total= `Total : ${(price*(1+GST)).toFixed(2)}`;
 
-console.log(total);
+// console.log(total);
+let tex="HELLO";
+let char=text.charAt(0);
+
+// let c2=text[2];
+// let t3=text.concat(" ",c2);
+
+
+// string parts
+
+
+// slice(start,end)
+//substring(start,end)
+//substr(start,length)
+
+// let text="Apple, Banana, Kiwi";
+// let part=text.slice(3,7);
+// let paer2=tex.slice(7);
+// let part3=slice(-12);// counted from the end of the point, right to left calc
+
+// // substring -> 
+
+// let str="Mozilla";
+// console.log(str.slice(5,2)); // ""
+// console.log(str.substring(5,2)); "zil"
+
+// let aa="abc adc";
+// let aa1=aa.replace("abc","edf");
+
+// 15 digits
+// let x=3.14;
+// let y=3;
+
+// let x=10;
+// let y=20;
+// let sum=x+y;
+// console.log(sum);
+
+let x1='10';
+let y1=20;
+let sum=x+y;
+console.log(sum); //1020
+
+// Note string + number =string 
+// 10+20+'30'->3030
+
+// "100"/"10"-> 10
+//"100"-"10"-> 90 
+
+//Nan -> Not a Number 
+
+
+// let x=100/"Apple"// Nan
+
+// infinity 
+// 5/0 
+
+// let y= new Number(123); // slow 
+
+// class c{
+
+// }
+
+// C c=new C("value");
+
+
+// let xx= 10;
+// let xxx=new Number(10);
+// obj in js can't be compared 
+// == value && === value & type 
+
+// == false & === false 
+
+
+// const obj ={
+//     type:"Maruti", model :"400",color:"WHite"
+// }
+// reassign to point to diff varoable 
+// obj literal 
+
+// const p={};
+// p.firstName="John";
+
+
+// const p1=new Object({
+
+// })
+
+const p11={
+    lname:"Doe",
+    fullname: function(){
+        return "John"+this.lname;
+    }
+}// this has context of the current object 
+
+
+
+
+// console.log(0 == false) // true 
+// console.log('' == false) // true
+// console.log([] == false) // object -> primitive ,  toString() -> '' -> 
+// // false               // true 
+// console.log(undefined == false) // false 
+// console.log(null == false). // false 
+// console.log('1' == true). //true 
+// console.log(' 1     ' == true) //  true 
+
+// !
+// !1-> !0-> 1 if(1) if(0) 
+
+// console.log([] == 0) // true
+// console.log([] == false) // true
+// console.log(!![])  // true
+// console.log([1] == 1) // true 
+// console.log(!![1]) // true 
+// console.log(Boolean([])) // true 
+// console.log(Boolean(new Boolean([]))) // true  boolean of some object 
+// console.log(Boolean(new Boolean(false))) // true 
+
+
+
+console.log(0 == '0')
+console.log(0 === '0')
+console.log(Object.is(0, '0'))
+
+console.log(0 == 0)
+console.log(0 === 0)
+console.log(Object.is(0, 0))
+
+console.log(0 == -0)
+console.log(0 === -0)
+console.log(Object.is(0, -0))
+
+console.log(NaN == NaN)
+console.log(NaN === NaN)
+console.log(Object.is(NaN, NaN))
+
+console.log(0 == false) // true 
+console.log(0 === false) // false
+console.log(Object.is(0, false))
+
+// if(false) if(0)  
+
+
+
+
+
+
+
+
+
+
 
 
 
