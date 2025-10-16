@@ -195,11 +195,6 @@
 // 1 
 
 
-
-
-
-
-
 // // // -------------------------------------------------// 
 // console.log(1)  // call stack 
 // setTimeout(() => {
@@ -225,16 +220,15 @@
 // 
 
 // // -------------------------------------------------// 
-new Promise((resolve, reject) => {
-       resolve(1)
-    reject('error')
- 
-    resolve(2)
-    resolve(3)
-}).then((value) => {
-  console.log(value)
-}, (error) => {
-  console.log('error')
-})
-// 1 
+// new Promise((resolve, reject) => {
+//     resolve(1)
+//     reject('error')
+//     resolve(2)
+//     resolve(3)
+// }).then((value) => {
+//   console.log(value)
+// }, (error) => {
+//   console.log('error')
+// })
+// // 1 
 

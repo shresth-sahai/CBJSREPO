@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyHTML</title>
+    <style>
+        body{
+            background: #f0f0f0;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 50px;
+            text-align: center;
+        }
+        .container{
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        h1{
+            color: #56b263;;
+        }
+        
+        .counter-display{
+            font-size: 60px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 20px;
+
+        }
+        button {
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .btn-decrease{
+            background: #ff6b6b;
+            color: white;
+        }
+        .btn-increase{
+            background: #51cf66;
+            color: white;
+        }
+        .btn-reset{
+            background: #495057;
+            color: white;
+        }
+        .btn-submit{
+            background: #667eea;
+        }
+
+        input{
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+       Counter App  
+    </h1>
+    <p> Learn HTML CSS JS </p>
+
+    <div class="counter-display" id="counterDisplay">
+        0
+    </div>
+
+    <div>
+
+            <button onclick="decreaseCounter()" class="btn-decrease">
+        Decrease
+    </button>
+         <button onclick="increaseCounter()" class="btn-increase">
+        Increase
+    </button>
+
+    <button class="btn-reset" onclick="resetCounter()">Reset</button>
+
+
+    </div>
+       <div style="margin-top: 20px;">
+        <h3> Set Custome value</h3>
+        <input type="number" id="customValue" placeholder="Enter a number" >
+        <button class="btn-submit">Set Value</button>
+        <div class="message" id="message"></div>
+    </div>
+
+
+</div>
+
+<script>
+let counter =0;
+function updateDisplay(){
+    document.getElementById("counterDisplay").textContent=counter;
+}
+function increaseCounter(){
+    counter++;
+    updateDisplay();
+}
+function decreaseCounter(){
+    counter--;
+    updateDisplay();
+}
+
+function resetCounter(){
+    counter=0;
+    updateDisplay();
+}
+function setCustomValue(){
+    const input=document.getElementById("customvalue");
+    const value=input.value;
+
+    if(value==='') return;
+
+    counter=parseInt(value);
+
+    updateDisplay();
+    input.value=''
+
+}
+
+updateDisplay();
+
+</script>
+    
+</body>
+</html>
