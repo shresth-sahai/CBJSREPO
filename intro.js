@@ -369,6 +369,15 @@ console.log(Object.is(0, false))
 
 
 
+// const obj ={
+//     id:Date.now(),
+//     text:"Hi",
+//     completed:false
+// };
+// // spread operator 
+// const ob2={
+//     ...obj, completed:true
+// }
 
 
 

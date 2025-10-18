@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change app</title>
+
+    <style>
+        body{
+            background: #f0f0f0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+         padding: 50px;
+        text-align: center;
+      }
+      .container{
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+ }
+ h1{
+    color: #56b263;
+ }
+ button{
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+ }
+ .btn-change_color{
+    background: #ff6b6b;
+    color:white;
+ }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Color Change app</h1>
+        <p> Change color by clicking below button </p>
+        <div>
+            <button onclick="change_Color()" class="btn-change_color">Change Color </button>
+        </div>
+
+    </div>
+    <script>
+
+        const color=["Red","Blue","Green","Pink","Orange"];
+        let currentIndex=0;
+        function change_Color(){
+            // const randomIndex=Math.floor(Math.random()*color.length);
+
+            // const randomIndex= currentIndex+1 % color.length; 
+            // document.body.style.background=color[randomIndex];
+        //         for(let i=0;i<color.length;i++){
+        //                 if(i === currentIndex) {
+        //                     document.body.style.background=color[i];
+        //                     break;
+        //                 }
+        //         }
+        //         currentIndex++;
+        //         if(currentIndex>=color.length){
+        //             currentIndex=0;
+        //         }
+         }
+    </script>
+    
+</body>
+</html>

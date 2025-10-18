@@ -232,3 +232,7 @@
 // })
 // // 1 
 
+console.log("5"-1);
+// type coercion -> - -> 
+
+console.log("5"+ 1); // -> concat 
