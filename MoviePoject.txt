@@ -1,0 +1,10 @@
+
+
+
+Data -> static 
+-> dyanmic -> continuous change 
+
+API -> Application Porgramming Interface 
+
+Blackbox -> API 
+
