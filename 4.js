@@ -24,6 +24,3 @@ console.log(evens);
 //[2,4]
 const age25=user.filter(use=> 
     use.age>24);
-
-
-
