@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randome User Generator </title>
+    <style>
+        *{
+            margin:0; padding:0 ; box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(135deg,#667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card{
+            background: rgb(196, 237, 209);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1{
+            color: #ae3d3d;
+            margin-bottom: 30px;
+        }
+        button{
+            margin-top: 20px;
+            padding: 15px;
+            color: white;
+            background: #667eea;
+            border-radius: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1> Random User </h1>
+        <div id="user">
+            <div class="loading">
+                Click to generate user
+            </div>
+            <button>Generate User</button>
+        </div>
+    </div>
+    <script>
+        async function getUser() {
+            document.getElementById('user').innerHTML= `<div class="loading">Loading...</div>`;
+            try{
+                const response= await axios('https://randomeuser.me/api/');
+                console.log(response);
+              
+
+                // code for aasignment of values 
+
+            }
+        }
+    </script>
+</body>
+</html>

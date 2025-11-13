@@ -1,0 +1,85 @@
+
+UI -> User Interface -> 
+
+Impl -> 
+CSS -> 
+HTML -> 
+JS -> 
+
+DOM -> Document object modal 
+
+
+Design  -> 
+
+RADIO abt :
+1 requiremnet -> Zomato , Uber , Fb etc features/functionalities 
+2 High level design -> ' button ' -> something ---> data flow (popup alert)
+3 Data Model -> UI -> Fb -> username , password -> fields 
+4 API -> place from which we get data to be dispalyed 
+5 optimisation -> 10k records to be display -> lag latency -> seamless
+
+Lighthouse -> tool fr web page UI testing -> attached to the browser 
+
+
+FB feed / insta feed 
+browse through the posts 
+like / comment 
+create /publish new posts
+commenting / sharing of posts 
+
+
+feed UI     -> Post composer 
+controller  -> client storage 
+    /
+Data
+Server 
+
+client store -> store in which data is needed across the whole app is stored 
+Present the data -> interaction 
+Post composer -> what you see is what you get -> to edit the create the feed posts 
+
+Rendering approach -> 
+SSR -> rendering the HTML on server -> static content -> SEO html is fully rendered then it shows this 
+CSR -> html is generated on the client -> heavy js code here -> chats app 
+
+Next js -> SSR + CSR -> hybrid app of CSR + SSR 
+
+Website -> static website 
+Webapp -> Website + interactions 
+
+Client Store -> normalised client  Data store -> User , post , image , text etc -> database 
+FB -> relay 
+re reduncted -> faster load etc .... 
+
+
+
+pagination -> 
+1 cursor based pagination [11-15] -> slack -> zendesk , fb 
+2 offset based pagination-> specific starting & ending -> limit to retrieve items
+
+offset-> small data sets 
+cusrosr -> larger based data sets 
+
+
+infinte scroll -> 
+
+optimisations -> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
