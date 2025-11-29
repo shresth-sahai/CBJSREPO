@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes App </title>
+    <style>
+    body{
+        font-family:Arial;
+        max-width:600px;
+        margin:40px;
+        padding: 20px;
+        border: 1px solid;
+        border-radius: 8px;
+    }
+    h1{
+        text-align: center;
+    }
+    #joke-display{
+        margin:20px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+    button{
+        padding: 8px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    </style>
+
+</head>
+<body>
+    <h1>Jokes App </h1>
+    <div>
+        <button id="random-joke-btn"> Get Random Joke</button>
+          <button id="load-all-jokes-btn"> Load All Jokes</button>
+    </div>
+    <h3> Random Joke</h3>
+    <div id="joke-display">Click "Get Random Joke" to see one!</div>
+    <div class="new-joke-form">
+        <h3> Add a new Joke</h3>
+        <textarea
+        id="new-joke-text"
+        rows="3"
+        placeholder="Write ur joke here">
+        </textarea>
+        <br>
+        <button class="add-joke-btn">
+            Add Joke
+        </button>
+        <div id="add-joke-message"></div>
+    </div>
+    <div class="all-jokes">
+        <h3>All jokes :</h3>
+        <div id="jokes-list"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
