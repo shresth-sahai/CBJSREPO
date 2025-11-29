@@ -62,3 +62,6 @@ async function addNewJoke() {
 randomJokeBtn.addEventListener("click",fetchAllJokes);
 
 fetchAllJokes()
+
+
+// www.localhost:3000 -> index.html
