@@ -8,7 +8,7 @@ async function fetchRandomJoke() {
     try{
         const res=await fetch(`${BASE_URl}/api/jokes/random`);
         if(!res.ok){
-            // retunr
+            // return 
         }
         const joke=await res.json();
         // id -> joke
