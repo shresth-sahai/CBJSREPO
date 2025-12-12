@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task app</title>
+</head>
+<body>
+    <button onclick="getTasks()">
+        Get Tasks
+    </button>
+
+        <pre id="output"></pre>
+
+    <script>
+        const base="http://localhost:3000/tasks"
+        const out =document.getElementById("output");
+
+        async function getTasks() {
+            out.textContent= await ()
+        }
+
+        async function patchTask() {
+            out.textContent= await (await fetch(base+"/1"),{
+                method:"PATCH",
+                headers:{}
+                body:JSON.stringify({done:True})
+            }).text();
+        }
+    </script>
+</body>
+</html>
