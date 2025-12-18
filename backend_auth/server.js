@@ -44,3 +44,22 @@ app.delete("/products/:id",authorize(["ADMIN"]),(req,res)=>{
 app.listen(3000,()=>{
     console.log("Running!")
 })
+
+
+/*
+
+function getRoleHeader(){
+const role=document.ger
+}
+
+const res=await fetch(
+"/",{
+method:"POST",
+headers:{
+"Content-Type":"application/json",
+headers:getRoleHeader()
+}
+})
+
+
+*/
