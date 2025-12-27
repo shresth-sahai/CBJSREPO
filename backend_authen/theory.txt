@@ -1,0 +1,36 @@
+
+// autho -> what user can do 
+// authen -> verify the user ->process of verifyinh who a user is 
+// Username +pass login
+//  OTP 
+// Login via Google/github 
+//Token JWT 
+
+// password -> hased password 
+// bcrypt 
+// TOkens/ sessions 
+// A Session based -> Server stores session 
+// browser send cookies 
+
+// B TOken based JWT 
+// client sent token via header 
+// server issues token 
+
+// Authorisation ->Bearer 
+
+// auth -> 
+// user register / login -> server verify cred -> 
+ // server generates JWT -> client stores token 
+ // client sends token with every request 
+ // server verifies 
+
+
+
+ 
+
+
+
+
+
+
+
