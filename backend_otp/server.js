@@ -6,11 +6,20 @@
 // expiry 
 // OTP verify -> session bnta h 
 const express=require("express");
+const nodemailer=require("nodemailer")
 const app=express();
 app.use(express.json());
 
 let otps={}; // phone:{otp,expirytime}
 let sessions={};// {token: phone}
+// for nodemailer 
+const transporter = nodemailer.createTransport({
+  service:"gmail",
+  auth: {
+    user: "maddison53@ethereal.email",
+    pass: "jn7jnAPss4f63QBp6D",
+  },
+});
 
 app.post("/send-otp",(req,res)=>{
     const {phone}=req.body;
@@ -20,6 +29,25 @@ app.post("/send-otp",(req,res)=>{
     otps[phone]={otp,expiresAt};
     // twilio  // fast 2 msg 
     console.log("OTP sent!");
+    res.json({message:"OTP sent "});
+});
+
+app.post("/send-otpemail",async (req,res)=>{
+    const {email}=req.body;
+    if(!email) return res.status(400).json({error:"Phone Required"});
+    const otp=Math.floor(10000*Math.random()*900000);
+    const expiresAt=Date.now+ 2*60*1000; // 2min
+    otps[email]={otp,expiresAt};
+
+    await transporter.sendMail(
+        {
+            from:"OTP Service, gmail acc",
+            to:email,
+            subject:"OTP code",
+            text:"OTP is xxxxxx, It expires in 2 mins "
+        }
+    );
+    
     res.json({message:"OTP sent "});
 });
 
