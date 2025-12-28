@@ -16,7 +16,7 @@ app.post("/send-otp",(req,res)=>{
     const {phone}=req.body;
     if(!phone) return res.status(400).json({error:"Phone Required"});
     const otp=Math.floor(10000*Math.random()*900000);
-    const expiresAt=DataTransfer.now()+ 2*60*1000; // 2min
+    const expiresAt=Date.now+ 2*60*1000; // 2min
     otps[phone]={otp,expiresAt};
     // twilio  // fast 2 msg 
     console.log("OTP sent!");
