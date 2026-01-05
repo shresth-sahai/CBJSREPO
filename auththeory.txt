@@ -1,0 +1,42 @@
+1JWT logout -> JWT logout -> JWT stateless 
+Server does not store sessions
+TOken destroy 
+
+TOken Blacklisitng -> store invalid token and reject them.
+
+const blacklist=new Set();
+
+2  Short Expiry TOkens->
+    jwt.sign()-> auto expires 
+
+3 cookie-> vs Hedaer based auth 
+-> Bearer TOken -> Authorisation 
+
+cookie -> user meta pref -> store -> customise as per user 
+// XSS 
+// JS cannot read 
+res.cookie("token",token,{
+
+})
+
+4 Oauth 2.0 -> password , google /github user -> google; google -> code server-> token 
+passport.use(new GoogleStrategy)
+
+5 Session Store -> (production )
+Redis Session store , fast , distributed
+
+6 Rate limiting -> Auth protected 
+const rateLimit =require(express-rate-limit);
+
+app.post("/login",loginLimiter,loginHandler); 
+
+
+7 Password reset flow
+email -> reset linnk -> token -> new password 
+
+8 claims -> ADMIN -> jwt.sign({role:"ADMIN"})
+        scope ->write,read-> jwt.sign({scopes:["read","write]});
+
+9 MFA -> password ->OTP 
+
+10 -> Zero trust / mordern auth -> token rotation shprt lived token 

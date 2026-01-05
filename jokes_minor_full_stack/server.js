@@ -7,7 +7,8 @@ const app=express()
 
 
 const PORT=3000
-
+// POST -> creation logic 
+// GET ->  retrieval -> 
 
 app.use(cors());
 app.use(express.json());
@@ -33,22 +34,27 @@ app.get("/api/jokes/random",(req,res)=>{
     if(jokes.length===0) return res.json(404).json({error:"no jokes presrnt"});
 
     const randomIndex=Math.floor(Math.random()*jokes.length);
+
     res.json(jokes[randomIndex]);
 })
 
 // add a new joke
 
 app.post("/api/jokes",(req,res)=> { 
-    const {text}=req.body;
+  
+    const {text}=req.body; // input from user 
+    //{ text:"","name"
+  //  }
     if(!text) return res.json(404).json({error:" joke text is required"});
 
-
+//creation 
     const joke={
         id:nextJokesId++,
         text:text.trim()
     };
 
     jokes.push(joke);
+
     res.status(201).json(joke);
 })
 

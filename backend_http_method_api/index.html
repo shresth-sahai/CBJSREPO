@@ -19,9 +19,10 @@
         async function getTasks() {
             out.textContent= await ()
         }
-
+ //.text () -> promise 
+        // const data =await reponse.json( )
         async function patchTask() {
-            out.textContent= await (await fetch(base+"/1"),{
+            out.textContent=  (await fetch(base+"/1"),{
                 method:"PATCH",
                 headers:{}
                 body:JSON.stringify({done:True})
@@ -29,4 +30,4 @@
         }
     </script>
 </body>
-</html>
+</html>await

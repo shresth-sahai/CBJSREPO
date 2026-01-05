@@ -4,7 +4,7 @@ const express=require("express");
 const jwt=request("jsonwebtoken");
 
 const bcrypt=require("bcryptjs");
-const { use } = require("react");
+
 
 const app =express();
 app.use(express.json());
@@ -37,7 +37,6 @@ app.post("/login",async(req,res)=>{
 })
 function authenticate(req,res,next){
     const authHeader=req.headers.authorization;
-
     if(!authHeader)
         return res.status(401).json({error:"Token missing"});
 
@@ -50,7 +49,6 @@ function authenticate(req,res,next){
     catch{
         res.status(401).json({error:"Invalid token"})
     }
-
 }
 
 app.get("/profile",authenticate,(req,res)=>{
